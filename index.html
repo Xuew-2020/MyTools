@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>信息工程学院体育部在线工具</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>赛程表制作辅助工具 <i class="glyphicon glyphicon-pencil" title="Designed & Developed by Xue Wang"></i>
+			<small><i class="glyphicon glyphicon-king"></i> 体育部</small></h1>
+		</div>
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active" id="one"><a href="javascript:void(0)">比赛信息</a></li>
+		    <li role="presentation" id="two"><a href="javascript:void(0)">在线制作</a></li>
+		</ul>
+		<br />
+		<div class="row" id="page-one">
+			<div class="col-lg-6">
+				<div class="alert alert-info" role="alert">比赛信息</div>
+				<form>
+				  <div class="form-group">
+				    <label for="gm-name">比赛名称</label>
+				    <input type="text" class="form-control" id="gm-name" placeholder="输入比赛名称">
+				  </div>
+				  <label for="gm-time-start">比赛时间</label>
+				  <div class="row">
+				  	<div class="col-md-6">
+				  		<div class="input-group">
+				  		  <span class="input-group-addon" id="start">开始时间</span>
+				  		  <input type="date" class="form-control" placeholder="Username" aria-describedby="start" id="gm-time-start">
+				  		</div>
+				  	</div>
+				  	<div class="col-md-6">
+				  		<div class="input-group">
+				  		  <span class="input-group-addon" id="end">结束时间</span>
+				  		  <input type="date" class="form-control" placeholder="Username" aria-describedby="end" id="gm-time-end">
+				  		</div>
+				  	</div>
+				  </div>
+				  <br />
+				  <label>比赛类型</label>
+				  <div class="radio">
+				    <label>
+				      <input type="radio" name="gm-type" value="0" checked>
+				      篮球赛
+				    </label>
+				  </div>
+				  <div class="radio">
+				    <label>
+				      <input type="radio" name="gm-type" value="1">
+				      羽毛球赛
+				    </label>
+				  </div>
+				</form>
+			</div>
+			<div class="col-lg-6">
+				<div class="alert alert-info" role="alert">队伍信息</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-6">
+						<div class="list-group" id="group-A">
+						  <div class="list-group-item disabled">
+						    A组
+						  </div>
+						 <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						 <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						 <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						 <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						 <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						 <div class="list-group-item">
+							 <div class="btn-group btn-group-justified" role="group">
+							   <div class="btn-group" role="group" onclick="addListItem(this)">
+							     <button type="button" class="mybtn"><i class="glyphicon glyphicon-plus"></i></button>
+							   </div>
+							   <div class="btn-group" role="group" onclick="delListItem(this)">
+							     <button type="button" class="mybtn"><i class="glyphicon glyphicon-minus"></i></button>
+							   </div>
+							 </div>
+						 </div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6">
+						<div class="list-group" id="group-B">
+						  <div class="list-group-item disabled">
+						    B组
+						  </div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item">
+							  <div class="btn-group btn-group-justified" role="group">
+							    <div class="btn-group" role="group" onclick="addListItem(this)">
+							      <button type="button" class="mybtn"><i class="glyphicon glyphicon-plus"></i></button>
+							    </div>
+							    <div class="btn-group" role="group" onclick="delListItem(this)">
+							      <button type="button" class="mybtn"><i class="glyphicon glyphicon-minus"></i></button>
+							    </div>
+							  </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6">
+						<div class="list-group" id="group-C">
+						  <div class="list-group-item disabled">
+						    C组
+						  </div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item">
+							  <div class="btn-group btn-group-justified" role="group">
+							    <div class="btn-group" role="group" onclick="addListItem(this)">
+							      <button type="button" class="mybtn"><i class="glyphicon glyphicon-plus"></i></button>
+							    </div>
+							    <div class="btn-group" role="group" onclick="delListItem(this)">
+							      <button type="button" class="mybtn"><i class="glyphicon glyphicon-minus"></i></button>
+							    </div>
+							  </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6">
+						<div class="list-group" id="group-D">
+						  <div class="list-group-item disabled">
+						    D组
+						  </div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item"><input type="text" placeholder="输入队名" /></div>
+						  <div class="list-group-item">
+							  <div class="btn-group btn-group-justified" role="group">
+							    <div class="btn-group" role="group" onclick="addListItem(this)">
+							      <button type="button" class="mybtn"><i class="glyphicon glyphicon-plus"></i></button>
+							    </div>
+							    <div class="btn-group" role="group" onclick="delListItem(this)">
+							      <button type="button" class="mybtn"><i class="glyphicon glyphicon-minus"></i></button>
+							    </div>
+							  </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="page-two">
+			<div class="col-md-4">
+				<div class="alert alert-info" role="alert">对战情况</div>
+				<div class="main">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="list-group" id="set-A">
+							 <div class="list-group-item disabled">
+								A组
+							 </div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="list-group" id="set-B">
+							  <div class="list-group-item disabled">
+								B组
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="list-group" id="set-C">
+							  <div class="list-group-item disabled">
+								C组
+							  </div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="list-group" id="set-D">
+							  <div class="list-group-item disabled">
+								D组
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8" id="schedule">
+				<div class="alert alert-info" role="alert">赛程表
+					<div class="btn-group" role="group">
+					  <button type="button" class="btn btn-default" id="create_table">随机生成赛程表</button>
+					  <button type="button" class="btn btn-default" id="reset_table">重置</button>
+					  <button type="button" class="btn btn-default" id="export_table">导出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/index.js"></script>
+</html>

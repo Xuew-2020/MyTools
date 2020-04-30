@@ -1,0 +1,111 @@
+.page-header{
+	position: relative;
+}
+.page-header small{
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+#page-one .list-group-item{
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+.list-group-item input[type=text],.mybtn{
+	height: 100%;
+	width: 100%;
+	border: none;
+	text-align: center;
+}
+.mybtn{
+	background-color: #EEE;
+	color: white;
+}
+.mybtn:hover{
+	background-color: gray;
+}
+
+#page-two .list-group-item{
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+}
+.main{
+	height: 600px;
+	overflow: auto;
+}
+#schedule table tbody td{
+	padding: 0;
+}
+.basketball, .badminton{
+	margin: 0;
+}
+.basketball td{
+	width: 20%;
+	height: 30px;
+	text-align: center;
+}
+.badminton td{
+	height: 30px;
+	width: 5.6%;
+	text-align: center;
+}
+.basketball thead td,.badminton thead td{
+	background-color: #EEE;
+}
+.badminton thead td{
+	font-size: 20px;
+	font-weight: bold;
+	height: 35px;
+}
+#schedule .badminton tbody tr.tr_mid td{
+	border: 0;
+	border-top:1px solid #DDD;
+	border-bottom:1px solid #DDD;
+}
+.col-md-6 .basketball tfoot td,#schedule .badminton tfoot td,#schedule td.divide{
+	border: 0;
+}
+#schedule .badminton tfoot td{
+	border-top: 1px solid #DDD;
+}
+#schedule .col-md-6{
+	padding: 0;
+}
+.drag{
+	width: 100%;
+	background: #31B0D5;
+}
+#schedule tbody td.putArea{
+	padding: 0;
+}
+#schedule tbody td.putArea .drag{
+	height: 100%;
+	width: 100%;
+}
+#schedule .alert-info{
+	position: relative;
+}
+.alert-info .btn-group{
+	position: absolute;
+	right: 2%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#page-two .col-md-4 .col-xs-6{
+	padding: 0;
+}
+#page-two .col-md-4 .col-xs-6 .list-group-item{
+	border-radius: 0;
+	width: 100%;
+}
+.col-md-4 .main .row{
+	margin: 0;
+}
+#gm-time-start,#gm-time-end{
+	line-height: 1.42857143;
+}
